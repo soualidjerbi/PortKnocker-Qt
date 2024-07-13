@@ -1,0 +1,128 @@
+{
+    "configurations": [
+        {
+            "name": "Configuration 1",
+            "ip_address": "10.0.0.2",
+            "socket_port": "234",
+            "ports_in": [
+                [
+                    "8080",
+                    "UDP"
+                ],
+                [
+                    "442",
+                    "UDP"
+                ],
+                [
+                    "098",
+                    "TCP"
+                ],
+                [
+                    "1111",
+                    "UDP"
+                ]
+            ],
+            "ports_out": [
+                [
+                    "8081",
+                    "TCP"
+                ],
+                [
+                    "443",
+                    "TCP"
+                ],
+                [
+                    "544",
+                    "TCP"
+                ],
+                [
+                    "111",
+                    "TCP"
+                ]
+            ]
+        },
+        {
+            "name": "Configuration 2",
+            "ip_address": "192.168.68.107",
+            "socket_port": "5647",
+            "ports_in": [
+                [
+                    "8083",
+                    "UDP"
+                ],
+                [
+                    "443",
+                    "TCP"
+                ],
+                [
+                    "34563",
+                    "TCP"
+                ],
+                [
+                    "",
+                    ""
+                ]
+            ],
+            "ports_out": [
+                [
+                    "8084",
+                    "UDP"
+                ],
+                [
+                    "445",
+                    "TCP"
+                ],
+                [
+                    "12345",
+                    "UDP"
+                ],
+                [
+                    "",
+                    ""
+                ]
+            ]
+        },
+        {
+            "name": "Configuration 3",
+            "ip_address": "houseoftheff.duckdns.org",
+            "socket_port": "1234",
+            "ports_in": [
+                [
+                    "8080",
+                    "TCP"
+                ],
+                [
+                    "4443",
+                    "UDP"
+                ],
+                [
+                    "987",
+                    "TCP"
+                ],
+                [
+                    "12345",
+                    "TCP"
+                ]
+            ],
+            "ports_out": [
+                [
+                    "8081",
+                    "TCP"
+                ],
+                [
+                    "443",
+                    "TCP"
+                ],
+                [
+                    "544",
+                    "TCP"
+                ],
+                [
+                    "333",
+                    "UDP"
+                ]
+            ]
+        }
+    ],
+    "last_used": 2
+}

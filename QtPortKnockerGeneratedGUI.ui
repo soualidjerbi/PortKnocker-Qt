@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Samir Ouali Djerbi</author>
+ <class>QtGeneratedMainWindow</class>
+ <widget class="QMainWindow" name="QtGeneratedMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>574</width>
+    <height>305</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Port Knocker</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="chkConnectionBtn">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>40</y>
+      <width>271</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Test Conf</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="openingGrid">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>271</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <property name="rowCount">
+     <number>4</number>
+    </property>
+    <property name="columnCount">
+     <number>2</number>
+    </property>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column/>
+    <column/>
+   </widget>
+   <widget class="QComboBox" name="comboConfigurations">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>271</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="closingGrid">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>80</y>
+      <width>271</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <property name="rowCount">
+     <number>4</number>
+    </property>
+    <property name="columnCount">
+     <number>2</number>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column/>
+    <column/>
+   </widget>
+   <widget class="QLineEdit" name="addressTxt">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>10</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="portTxt">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>10</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeAppBtn">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>240</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closePortsBtn">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>240</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Knock Out</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openPortsBtn">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>240</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Knock In</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delConfBtn">
+    <property name="geometry">
+     <rect>
+      <x>152</x>
+      <y>40</y>
+      <width>131</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete Conf</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addConfBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>131</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Conf</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveBtn">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>574</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuConfiguration">
+    <property name="title">
+     <string>Configuration</string>
+    </property>
+    <addaction name="actionEditConfiguration"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuConfiguration"/>
+  </widget>
+  <action name="actionEditConfiguration">
+   <property name="text">
+    <string>Edit Configuration</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>comboConfigurations</tabstop>
+  <tabstop>addressTxt</tabstop>
+  <tabstop>portTxt</tabstop>
+  <tabstop>addConfBtn</tabstop>
+  <tabstop>delConfBtn</tabstop>
+  <tabstop>chkConnectionBtn</tabstop>
+  <tabstop>openingGrid</tabstop>
+  <tabstop>closingGrid</tabstop>
+  <tabstop>openPortsBtn</tabstop>
+  <tabstop>closePortsBtn</tabstop>
+  <tabstop>closeAppBtn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeAppBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>byeBye()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>479</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>497</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkConnectionBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>chkConnection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>455</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closePortsBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>closePorts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>310</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openPortsBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>openPorts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openingGrid</sender>
+   <signal>cellChanged(int,int)</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>updateGridOn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>156</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closingGrid</sender>
+   <signal>cellChanged(int,int)</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>updateGridOff()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboConfigurations</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>updateFields()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>164</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboConfigurations</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>updateComboText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>235</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>saveConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>16</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addConfBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>addConfiguration()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>delConfBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>delConfiguration()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addressTxt</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>updateAddress()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>455</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>474</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>portTxt</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>updatePort()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>530</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSave</sender>
+   <signal>triggered()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>saveConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEditConfiguration</sender>
+   <signal>triggered()</signal>
+   <receiver>QtGeneratedMainWindow</receiver>
+   <slot>editLoggerConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>byeBye()</slot>
+  <slot>chkConnection()</slot>
+  <slot>closePorts()</slot>
+  <slot>openPorts()</slot>
+  <slot>updateGridOn()</slot>
+  <slot>updateGridOff()</slot>
+  <slot>updateFields()</slot>
+  <slot>updateComboText()</slot>
+  <slot>saveConfig()</slot>
+  <slot>addConfiguration()</slot>
+  <slot>delConfiguration()</slot>
+  <slot>updateAddress()</slot>
+  <slot>updatePort()</slot>
+  <slot>editLoggerConfig()</slot>
+ </slots>
+</ui>
