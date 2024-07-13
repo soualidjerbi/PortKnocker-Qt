@@ -12,12 +12,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_QtGeneratedMainWindow(object):
     def setupUi(self, QtGeneratedMainWindow):
         QtGeneratedMainWindow.setObjectName("QtGeneratedMainWindow")
-        QtGeneratedMainWindow.resize(574, 305)
+        QtGeneratedMainWindow.resize(571, 309)
         self.centralwidget = QtWidgets.QWidget(parent=QtGeneratedMainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.chkConnectionBtn = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.chkConnectionBtn.setGeometry(QtCore.QRect(290, 40, 271, 32))
-        self.chkConnectionBtn.setObjectName("chkConnectionBtn")
         self.openingGrid = QtWidgets.QTableWidget(parent=self.centralwidget)
         self.openingGrid.setGeometry(QtCore.QRect(10, 80, 271, 151))
         self.openingGrid.setFrameShape(QtWidgets.QFrame.Shape.Box)
@@ -67,7 +64,7 @@ class Ui_QtGeneratedMainWindow(object):
         self.saveBtn.setObjectName("saveBtn")
         QtGeneratedMainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QtWidgets.QMenuBar(parent=QtGeneratedMainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 574, 24))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 571, 24))
         self.menuBar.setObjectName("menuBar")
         self.menuFichier = QtWidgets.QMenu(parent=self.menuBar)
         self.menuFichier.setObjectName("menuFichier")
@@ -87,7 +84,6 @@ class Ui_QtGeneratedMainWindow(object):
 
         self.retranslateUi(QtGeneratedMainWindow)
         self.closeAppBtn.clicked.connect(QtGeneratedMainWindow.byeBye) # type: ignore
-        self.chkConnectionBtn.clicked.connect(QtGeneratedMainWindow.chkConnection) # type: ignore
         self.closePortsBtn.clicked.connect(QtGeneratedMainWindow.closePorts) # type: ignore
         self.openPortsBtn.clicked.connect(QtGeneratedMainWindow.openPorts) # type: ignore
         self.openingGrid.cellChanged['int','int'].connect(QtGeneratedMainWindow.updateGridOn) # type: ignore
@@ -106,8 +102,7 @@ class Ui_QtGeneratedMainWindow(object):
         QtGeneratedMainWindow.setTabOrder(self.addressTxt, self.portTxt)
         QtGeneratedMainWindow.setTabOrder(self.portTxt, self.addConfBtn)
         QtGeneratedMainWindow.setTabOrder(self.addConfBtn, self.delConfBtn)
-        QtGeneratedMainWindow.setTabOrder(self.delConfBtn, self.chkConnectionBtn)
-        QtGeneratedMainWindow.setTabOrder(self.chkConnectionBtn, self.openingGrid)
+        QtGeneratedMainWindow.setTabOrder(self.delConfBtn, self.openingGrid)
         QtGeneratedMainWindow.setTabOrder(self.openingGrid, self.closingGrid)
         QtGeneratedMainWindow.setTabOrder(self.closingGrid, self.openPortsBtn)
         QtGeneratedMainWindow.setTabOrder(self.openPortsBtn, self.closePortsBtn)
@@ -116,7 +111,6 @@ class Ui_QtGeneratedMainWindow(object):
     def retranslateUi(self, QtGeneratedMainWindow):
         _translate = QtCore.QCoreApplication.translate
         QtGeneratedMainWindow.setWindowTitle(_translate("QtGeneratedMainWindow", "Port Knocker"))
-        self.chkConnectionBtn.setText(_translate("QtGeneratedMainWindow", "Test Conf"))
         self.closeAppBtn.setText(_translate("QtGeneratedMainWindow", "Close"))
         self.closePortsBtn.setText(_translate("QtGeneratedMainWindow", "Knock Out"))
         self.openPortsBtn.setText(_translate("QtGeneratedMainWindow", "Knock In"))

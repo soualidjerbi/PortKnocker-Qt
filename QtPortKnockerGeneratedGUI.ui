@@ -7,27 +7,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>574</width>
-    <height>305</height>
+    <width>571</width>
+    <height>309</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Port Knocker</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="chkConnectionBtn">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>40</y>
-      <width>271</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Test Conf</string>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="openingGrid">
     <property name="geometry">
      <rect>
@@ -216,7 +203,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>574</width>
+     <width>571</width>
      <height>24</height>
     </rect>
    </property>
@@ -257,7 +244,6 @@
   <tabstop>portTxt</tabstop>
   <tabstop>addConfBtn</tabstop>
   <tabstop>delConfBtn</tabstop>
-  <tabstop>chkConnectionBtn</tabstop>
   <tabstop>openingGrid</tabstop>
   <tabstop>closingGrid</tabstop>
   <tabstop>openPortsBtn</tabstop>
@@ -279,22 +265,6 @@
     <hint type="destinationlabel">
      <x>497</x>
      <y>288</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>chkConnectionBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>QtGeneratedMainWindow</receiver>
-   <slot>chkConnection()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>455</x>
-     <y>83</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>556</x>
-     <y>76</y>
     </hint>
    </hints>
   </connection>

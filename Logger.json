@@ -19,7 +19,7 @@
             "handlers": [
                 "console"
             ],
-            "level": "INFO",
+            "level": "DEBUG",
             "propagate": true
         }
     }
