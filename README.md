@@ -1,6 +1,6 @@
 # PortKnocker-Qt
 
-PortKnocker-Qt is a GUI Full-Python utility developed with th Qt Framework to enable opening/closing a specific port configuration on your server.
+PortKnocker-Qt is a GUI Full-Python utility developed with the Qt Framework to enable opening/closing a specific port configuration on your server.
 
 ## License
 
