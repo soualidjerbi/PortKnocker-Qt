@@ -43,7 +43,7 @@
         },
         {
             "name": "Configuration 2",
-            "ip_address": "192.168.68.107",
+            "ip_address": "192.168.0.107",
             "socket_port": "5647",
             "ports_in": [
                 [
@@ -84,7 +84,7 @@
         },
         {
             "name": "Configuration 3",
-            "ip_address": "houseoftheff.duckdns.org",
+            "ip_address": "www.google.com",
             "socket_port": "1234",
             "ports_in": [
                 [
@@ -124,5 +124,5 @@
             ]
         }
     ],
-    "last_used": 2
+    "last_used": 0
 }
