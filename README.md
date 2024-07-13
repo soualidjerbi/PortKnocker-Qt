@@ -24,19 +24,24 @@ Your digital security cannot rely on unique measures. If someone is determined t
 
 The easier way to install PortKnocker-Qt is to set up a virtualenv in ./PortKnocker-Qt directory. Installing a virtual environment is strongly advised to prevent messing with your current Python installation. This way you are sure to install every package needed defined in *requirements.txt*. 
 
-### Downloading package 
+#### Downloading package 
 
-```$ git clone https://github.com/soualidjerbi/portKnocker-Qt.git```
+```$ git clone https://github.com/soualidjerbi/portKnocker-Qt.git
+```
 
-### Installing the virtual environment
+#### Installing the virtual environment
 
 There are many ways to install a virtual environment. Choose the method that fits best for you. 
 
 - Lightweight  : This method does not let you choose the python version. Create the virtual environment dirctly with the python [venv](https://peps.python.org/pep-0405/) module
-```python -m venv <directory>````
+
+```python -m venv <directory>
+```
 
 - More elaborate : Use [virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html) to install the virtual environment and select one of the different versions of python you already have on your computer with : 
-```virtualenv --python="/path/to/python3.xx" "/path/to/new/virtualenv/"```
+
+```virtualenv --python="/path/to/python3.xx" "/path/to/new/virtualenv/"
+```
 
 - Finest : use [anaconda or miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to install the virtual environment. "conda create -n myenv python=3.9"
 
@@ -56,7 +61,8 @@ $ python QtMain.py
 This is a useful method for easy distribution as a ready-to-use package.
 Follow the steps described above to install a virtual environement, then execute the following command
 
-```$ pyinstaller -y QtPortKnocker.spec```
+```$ pyinstaller -y QtPortKnocker.spec
+```
 
 ## User Guide
 
