@@ -12,7 +12,7 @@ Port opening is two-fold : the client side for which the functionalities are pro
 
 ### On the server side
 
-The server side daemon interacts with the firewall (which is on the same server) by sending commands in order to open or close ports. To be fully functional, the server must be configured with the same sequence of ports and protocols used by the user-defined configurations stored in PortKnocker-Qt. If the combination of ports and protocols don't match between the server and the client, no port will open nor close and you might be clicking insanely to no avail :-).
+The server side daemon interacts with the firewall (which is on the same server -- or not) by sending commands in order to open or close ports. To be fully functional, the server must be configured with the same sequence of ports and protocols used by the user-defined configurations stored in PortKnocker-Qt. If the combination of ports and protocols don't match between the server and the client, no port will open nor close and you might be clicking insanely to no avail :-).
 
 ### Security Considerations
 
