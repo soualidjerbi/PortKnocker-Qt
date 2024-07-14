@@ -1,8 +1,8 @@
 
 import json
 import logging.config
-from FileLoader import FileLoader
-from QtLoggerConfigurationGeneratedGUI import *
+from classes.FileLoader import FileLoader
+from QtDesignerUI.QtLoggerConfigurationGeneratedGUI import *
 
 class LoggerWindow(QtWidgets.QDialog, Ui_QtLoggerConfigurationGenerated):
 	def __init__(self, logger=None):

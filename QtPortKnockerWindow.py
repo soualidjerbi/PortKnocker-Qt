@@ -1,10 +1,10 @@
 import sys
-from Logger import Logger
+from classes.Logger import Logger
 from PyQt6.QtWidgets import (QTableWidgetItem, QComboBox)
-from QtPortKnockerGeneratedGUI import *
+from QtDesignerUI.QtPortKnockerGeneratedGUI import *
 from QtLoggerWindow import LoggerWindow
-from Host import Host
-from Knocker import PortKnocker
+from classes.Host import Host
+from classes.Knocker import PortKnocker
 
 class PortKnockerWindow(QtWidgets.QMainWindow, Ui_QtGeneratedMainWindow):
 	def __init__(self):

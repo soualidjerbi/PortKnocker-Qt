@@ -1,4 +1,5 @@
-import json, os	
+import json, os, sys
+from pathlib import Path
 
 class FileLoader:
     def __init__(self, config_file, logger=None):
@@ -6,11 +7,8 @@ class FileLoader:
         self.config_file = self.getFilePath(config_file)
 
     def getFilePath(self, config_file)->str:
-        try:
-            path = f'{self.resource_path(".")}/{config_file}'
-        except Exception:
-            path = f'{os.path.dirname(__file__)}/{config_file}'
-        return path 
+        path = f'{Path(sys._MEIPASS).resolve()}' if getattr(sys, 'frozen', False) else f'{Path(__file__).parent.parent.resolve()}/configs'
+        return f'{path}/{config_file}'
     
     def loadFileData(self):
         with open(self.config_file, 'r') as f:

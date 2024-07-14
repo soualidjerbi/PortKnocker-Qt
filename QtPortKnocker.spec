@@ -2,9 +2,9 @@
 
 
 a = Analysis(
-    ['QtMain.py'],
+    ['PortKnocker.py'],
     pathex=[],
-    datas=[('Knocker.json','.'),('Logger.json','.')],
+    datas=[('configs/Knocker.json','.'),('configs/Logger.json','.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

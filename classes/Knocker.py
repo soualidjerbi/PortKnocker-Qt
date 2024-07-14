@@ -1,7 +1,7 @@
 import socket, time, select
-from Resolver import Resolver
-from FileLoader import FileLoader
-from Host import Host
+from classes.Resolver import Resolver
+from classes.FileLoader import FileLoader
+from classes.Host import Host
 
 class KnockerConfigurationLoader:
 	def __init__(self, config_file, logger=None):

@@ -1,5 +1,5 @@
 import logging, logging.config
-from FileLoader import FileLoader
+from classes.FileLoader import FileLoader
 
 
 class Logger:
