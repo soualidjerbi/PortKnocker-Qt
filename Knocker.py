@@ -33,7 +33,7 @@ class PortKnocker:
 	def __init__(self,logger=None):
 		self.logger = logger
 		self.delay = 0.3
-		self.configurationLoader = KnockerConfigurationLoader('configs.json', self.logger)
+		self.configurationLoader = KnockerConfigurationLoader('Knocker.json', self.logger)
 	def configure(self, host):
 		self.host = host
 		self.ipAddress = self.getIpFromName()

@@ -4,7 +4,7 @@
 a = Analysis(
     ['QtMain.py'],
     pathex=[],
-    datas=[('configs.json','.'),('Logger.json','.')],
+    datas=[('Knocker.json','.'),('Logger.json','.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -31,7 +31,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['KnockIt.icns'],
+    icon=['PortKnocker.icns'],
 )
 coll = COLLECT(
     exe,
@@ -45,6 +45,6 @@ coll = COLLECT(
 app = BUNDLE(
     coll,
     name='PortKnocker.app',
-    icon='KnockIt.icns',
+    icon='PortKnocker.icns',
     bundle_identifier=None,
 )
