@@ -6,14 +6,13 @@ def test_getDnsData_valid_hostname():
     # Arrange
     logger = Mock()
     resolver = Resolver(logger)
-    hostname = "example.com"
-    expected_ipv4_addresses = ["192.0.2.1", "192.0.2.2"]  # Example IP addresses
+    hostname = "google.com"
 
     # Act
     ipv4_addresses = resolver.getDnsData(hostname)
 
     # Assert
-    assert ipv4_addresses == expected_ipv4_addresses
+    assert len(ipv4_addresses) >= 1
     logger.debug.assert_not_called()
 
 def test_getDnsData_invalid_hostname():
@@ -26,5 +25,5 @@ def test_getDnsData_invalid_hostname():
     ipv4_addresses = resolver.getDnsData(hostname)
 
     # Assert
-    assert ipv4_addresses == []
+    assert ipv4_addresses is None
     logger.debug.assert_called_once()

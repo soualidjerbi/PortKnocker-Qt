@@ -1,7 +1,6 @@
 
 import json
 import logging.config
-from classes.FileLoader import FileLoader
 from QtDesignerUI.QtLoggerConfigurationGeneratedGUI import *
 
 class LoggerWindow(QtWidgets.QDialog, Ui_QtLoggerConfigurationGenerated):

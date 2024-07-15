@@ -9,8 +9,10 @@ class FileLoader:
     def getFilePath(self, config_file)->str:
         path = f'{Path(sys._MEIPASS).resolve()}' if getattr(sys, 'frozen', False) else f'{Path(__file__).parent.parent.resolve()}/configs'
         return f'{path}/{config_file}'
-    
+  
     def loadFileData(self):
+        if Path(self.config_file).exists() == False:
+            return ValueError(f'File not found: {self.config_file}')
         with open(self.config_file, 'r') as f:
             config = json.load(f)
         return config
