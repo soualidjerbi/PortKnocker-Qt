@@ -82,7 +82,7 @@ FQDN as well as IP addresses are allowed.
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
-### Other personal objectives I pursue
+## Other personal objectives I pursue
 
 This project is also intended to be educational. So far, this project helped me better understanding :
 
