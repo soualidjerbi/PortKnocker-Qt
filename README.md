@@ -82,4 +82,20 @@ FQDN as well as IP addresses are allowed.
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
+### Other personal objectives I pursue
+
+This project is also intended to be educational. So far, this project helped me better understanding :
+
+- [x] the [QT Framework](https://doc.qt.io/) to create user interfaces with Python,
+- [x] [QT Designer](https://doc.qt.io/qt-6/qtdesigner-manual.html) to create user interfaces
+- [x] the object oriented programming (still a lot to learn though)
+- [x] the use of [pyinstaller](https://pyinstaller.org/en/stable/) to distribute packaged apps, simple and ready-to-use on Mac OS (family requirement...) or Windows (not tried yet...)
+- [x] the use of virtual envirements as described above
+- [x] the use of [visual studio code](https://code.visualstudio.com/) to do the job
+- [x] how useful AI can be to develop faster
+- [x] the use of git tools and github.com to share what I learn and get some feedback to improve. Maybe try something bigger later
+- [x] the kind of licence which fits better to my personal ideas
+- [x] how to write this README.md and use the Markdown language
+- [ ] how to **Test code** with Python
+- [ ] many other things I didn't think about yet :smile:
 
