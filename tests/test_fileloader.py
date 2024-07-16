@@ -42,4 +42,4 @@ def test_file_loader_handles_missing_file(file_loader):
     """
     file_loader = FileLoader('non_existent.json', logger=Logger())
     error = file_loader.loadFileData()
-    assert isinstance(error, ValueError)
+    assert isinstance(error, FileNotFoundError)

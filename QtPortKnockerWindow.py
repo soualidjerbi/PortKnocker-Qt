@@ -15,8 +15,7 @@ class PortKnockerWindow(QtWidgets.QMainWindow, Ui_QtGeneratedMainWindow):
 		self.knocker = PortKnocker(self.logger)
 		self.confCatalogue, self.index = self.knocker.configurationLoader.load()
 		self.setupUi(self)
-		self.adjustTableFormat(self.openingGrid)
-		self.adjustTableFormat(self.closingGrid)
+		self.adjustTableFormat([self.openingGrid, self.closingGrid])
 		self.setAdditionalComboParameters()
 		self.setFields(self.confCatalogue[self.index])
 	
@@ -40,11 +39,12 @@ class PortKnockerWindow(QtWidgets.QMainWindow, Ui_QtGeneratedMainWindow):
 		self.setFields(self.confCatalogue[self.index])
 
 	def adjustTableFormat(self, grid):
-		grid.setHorizontalHeaderLabels(['Port', 'Protocol'])
-		grid.setColumnWidth(0, 150)
-		grid.setColumnWidth(1, 95)
-		grid.verticalScrollBar().setEnabled(False)
-		grid.horizontalScrollBar().setEnabled(False)
+		for i in range(grid.__len__()):
+			grid[i].setHorizontalHeaderLabels(['Port', 'Protocol'])
+			grid[i].setColumnWidth(0, 150)
+			grid[i].setColumnWidth(1, 95)
+			grid[i].verticalScrollBar().setEnabled(False)
+			grid[i].horizontalScrollBar().setEnabled(False)
 		
 	def chkConnection(self):
 		pass

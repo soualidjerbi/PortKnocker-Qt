@@ -12,7 +12,7 @@ class FileLoader:
   
     def loadFileData(self):
         if Path(self.config_file).exists() == False:
-            return ValueError(f'File not found: {self.config_file}')
+            return FileNotFoundError(f'File not found: {self.config_file}')
         with open(self.config_file, 'r') as f:
             config = json.load(f)
         return config
