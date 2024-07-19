@@ -1,12 +1,22 @@
 import logging, logging.config
 from classes.FileLoader import FileLoader
+from dataclasses import dataclass, field
 
+@dataclass
+class LoggerConfigurationLoader():
+	fileLoader : dict = None
+	loggerConfigFileName : str = field(default='Logger.json')
+	
+	def load(self) -> dict:
+		return FileLoader().loadFileData(self.loggerConfigFileName)
+
+	def save(self,config) -> None:
+		FileLoader().saveTextToFile(self.loggerConfigFileName, config)
 
 class Logger:
 	def __init__(self):
-		self.fileLoader = FileLoader('Logger.json')
-		self.logging_config =  self.fileLoader.loadFileData()
-		logging.config.dictConfig(self.logging_config)
+		logging_config = LoggerConfigurationLoader().load()
+		logging.config.dictConfig(logging_config)
 		self.logger = logging.getLogger(__name__)
 
 	def debug(self, message):
@@ -23,4 +33,3 @@ class Logger:
 
 	def critical(self, message):
 		self.logger.critical(message)
-		

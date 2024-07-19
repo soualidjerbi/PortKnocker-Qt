@@ -1,26 +1,28 @@
-import json, os, sys
+import json, sys
 from pathlib import Path
 
 class FileLoader:
-    def __init__(self, config_file, logger=None):
-        self.logger = logger
-        self.config_file = self.getFilePath(config_file)
-
-    def getFilePath(self, config_file)->str:
+    @staticmethod
+    def getFilePath(config_file) -> str:
         path = f'{Path(sys._MEIPASS).resolve()}' if getattr(sys, 'frozen', False) else f'{Path(__file__).parent.parent.resolve()}/configs'
-        return f'{path}/{config_file}'
-  
-    def loadFileData(self):
-        if Path(self.config_file).exists() == False:
-            return FileNotFoundError(f'File not found: {self.config_file}')
-        with open(self.config_file, 'r') as f:
+        config_file = f'{path}/{config_file}'
+        if Path(config_file).exists() == True:
+            return config_file
+        else:
+            return FileNotFoundError(f'File not found: {config_file}')
+    @staticmethod
+    def loadFileData(config_file) -> dict:
+        config_file = FileLoader.getFilePath(config_file)
+        with open(config_file, 'r') as f:
             config = json.load(f)
         return config
-    
-    def saveDataToFile(self, jsonData)->None:
-        with open(self.config_file, 'w') as f:
+    @staticmethod
+    def saveDictToFile(config_file, jsonData)->None:
+        config_file = FileLoader.getFilePath(config_file)
+        with open(config_file, 'w') as f:
             json.dump(obj=jsonData, fp=f ,indent=4)
-    
-    def saveTextToFile(self, textData)->None:
-        with open(self.config_file, 'w') as f:
+    @staticmethod
+    def saveTextToFile(config_file, textData)->None:
+        config_file = FileLoader.getFilePath(config_file)
+        with open(config_file, 'w') as f:
             f.write(textData)

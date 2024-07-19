@@ -2,22 +2,24 @@ import socket, time, select
 from classes.Resolver import Resolver
 from classes.FileLoader import FileLoader
 from classes.Host import Host
+from dataclasses import dataclass, field
 
+@dataclass
 class KnockerConfigurationLoader:
-	def __init__(self, config_file, logger=None):
-		self.logger = logger
-		self.fileLoader = FileLoader(config_file, self.logger)
+	logger : dict = field(default_factory=dict)
+	fileLoader : dict = None
+	knockerConfigFileName : str = field(default='Knocker.json')
 		
-	def load(self):
+	def load(self) -> dict:
 		self.logger.debug('------Load Config-------')
-		self.config = self.fileLoader.loadFileData()
+		config = FileLoader.loadFileData(self.knockerConfigFileName)
 		allConfs = []
-		for config in self.config['configurations']:
+		for conf in config['configurations']:
 			tempconfig = Host()
-			tempconfig = tempconfig.createHost(config)
+			tempconfig = tempconfig.createHost(conf)
 			allConfs.append(tempconfig)
 			tempconfig = None
-		return allConfs, self.config['last_used']
+		return allConfs, config['last_used']
 	
 	def save(self, config, index) -> None:
 		allConfs = [
@@ -27,13 +29,16 @@ class KnockerConfigurationLoader:
 			"configurations": allConfs,
 			"last_used": index
 		}
-		self.fileLoader.saveDataToFile(json_config)
-
+		FileLoader.saveDictToFile(self.knockerConfigFileName, json_config)
+@dataclass
 class PortKnocker:
-	def __init__(self,logger=None):
-		self.logger = logger
-		self.delay = 0.3
-		self.configurationLoader = KnockerConfigurationLoader('Knocker.json', self.logger)
+	logger : dict = field(default_factory=dict)
+	delay  : float = 0.3
+	configurationLoader : dict = field(default_factory=dict)
+ 
+	def __post_init__(self):
+		self.configurationLoader = KnockerConfigurationLoader(self.logger)
+  
 	def configure(self, host):
 		self.host = host
 		self.ipAddress = self.getIpFromName()

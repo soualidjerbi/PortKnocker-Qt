@@ -2,7 +2,7 @@ import sys
 from classes.Logger import Logger
 from classes.Knocker import PortKnocker
 from classes.Host import Host
-from PyQt6.QtWidgets import (QTableWidgetItem, QComboBox)
+from PyQt6.QtWidgets import (QTableWidget, QTableWidgetItem, QComboBox)
 from QtDesignerUI.QtPortKnockerGeneratedGUI import *
 from QtLoggerWindow import LoggerWindow
 
@@ -19,10 +19,10 @@ class PortKnockerWindow(QtWidgets.QMainWindow, Ui_QtGeneratedMainWindow):
 		self.setAdditionalComboParameters()
 		self.setFields(self.confCatalogue[self.index])
 	
-	def byeBye(self):
+	def byeBye(self) -> None:
 		sys.exit()
 	
-	def addConfiguration(self):
+	def addConfiguration(self) -> None:
 		newConf = Host()
 		self.confCatalogue.append(newConf)
 		self.comboConfigurations.addItem('')
@@ -30,7 +30,7 @@ class PortKnockerWindow(QtWidgets.QMainWindow, Ui_QtGeneratedMainWindow):
 		self.comboConfigurations.setCurrentIndex(self.index)
 		self.setFields(self.confCatalogue[self.index])
 
-	def delConfiguration(self):
+	def delConfiguration(self) -> None:
 		index = self.comboConfigurations.currentIndex()
 		self.index = index -1 if index >= len(self.confCatalogue) - 1 else index
 		self.comboConfigurations.removeItem(index)
@@ -38,7 +38,7 @@ class PortKnockerWindow(QtWidgets.QMainWindow, Ui_QtGeneratedMainWindow):
 		self.comboConfigurations.setCurrentIndex(self.index)
 		self.setFields(self.confCatalogue[self.index])
 
-	def adjustTableFormat(self, grid):
+	def adjustTableFormat(self, grid) -> None:
 		for i in range(grid.__len__()):
 			grid[i].setHorizontalHeaderLabels(['Port', 'Protocol'])
 			grid[i].setColumnWidth(0, 150)
@@ -46,72 +46,72 @@ class PortKnockerWindow(QtWidgets.QMainWindow, Ui_QtGeneratedMainWindow):
 			grid[i].verticalScrollBar().setEnabled(False)
 			grid[i].horizontalScrollBar().setEnabled(False)
 		
-	def chkConnection(self):
+	def chkConnection(self) -> None:
 		pass
-	def openPorts(self):
+	def openPorts(self) -> None:
 		host = self.confCatalogue[self.index]
 		self.knocker.configure(host)
 		self.knocker.knock_in()
 		
-	def saveConfig(self ):
+	def saveConfig(self ) -> None:
 		self.logger.debug('------Save Config-------')
 		self.knocker.configurationLoader.save(self.confCatalogue, self.index)
 		
-	def closePorts(self):
+	def closePorts(self) -> None:
 		host = self.confCatalogue[self.index]
 		self.knocker.configure(host)
 		self.knocker.knock_out()
 
-	def setFields( self, configuration ):
+	def setFields( self, configuration ) -> None:
 		self.openingGrid = self.setGridValues(configuration.ports_in, self.openingGrid)
 		self.closingGrid = self.setGridValues(configuration.ports_out, self.closingGrid)
 		self.addressTxt.setText(configuration.ip_address)
 		self.portTxt.setText(configuration.socket_port)
 		
-	def setGridValues(self, data, grid):
+	def setGridValues(self, data, grid) -> QTableWidget:
 		for i, (port, protocol) in enumerate(data):
 			grid.setItem(i, 0, QTableWidgetItem(port))
 			grid.setItem(i, 1, QTableWidgetItem(protocol.upper()))
 		return grid
-	def getGridValuesAsList(self, grid):
+	def getGridValuesAsList(self, grid) -> list:
 		return [
 			(grid.item(row, 0).text() if grid.item(row, 0) is not None else '',
 			 grid.item(row, 1).text() if grid.item(row, 1) is not None else '')
 			for row in range(grid.rowCount())
 		]
 	
-	def setAdditionalComboParameters(self):
+	def setAdditionalComboParameters(self) -> None:
 		self.comboConfigurations.setInsertPolicy(QComboBox.InsertPolicy.NoInsert)
 		names = [conf.name for conf in self.confCatalogue]
 		self.comboConfigurations.addItems(names)
 		self.comboConfigurations.setCurrentIndex(self.index)
 	
-	def updateGridOn(self):
+	def updateGridOn(self) -> None:
 		self.confCatalogue[self.index].ports_in = self.getGridValuesAsList(self.openingGrid)
 
-	def updateGridOff(self):
+	def updateGridOff(self) -> None:
 		self.confCatalogue[self.index].ports_out = self.getGridValuesAsList(self.closingGrid)
 
-	def updateFields(self):
+	def updateFields(self) -> None:
 		self.logger.debug('------Update Fields------')
 		self.index = self.comboConfigurations.currentIndex()
 		self.logger.debug(f' self.index set to : {self.index}')
 		self.setFields(self.confCatalogue[self.index])
 		self.saveConfig()
 		self.logger.debug('------Update Fields End--')
-	def updateAddress(self):
+	def updateAddress(self) -> None:
 		self.confCatalogue[self.index].ip_address = self.addressTxt.text()
 
-	def updatePort(self):
+	def updatePort(self) -> None:
 		self.confCatalogue[self.index].socket_port = self.portTxt.text()
 		
-	def updateComboText(self):
+	def updateComboText(self) -> None:
 		self.logger.debug('------Update Combo-------')
 		self.index = self.comboConfigurations.currentIndex()
 		comboText = self.comboConfigurations.currentText()
 		self.confCatalogue[self.index].name = comboText
 		self.comboConfigurations.setItemText(self.index, comboText)
 		self.logger.debug('------Update Combo End---')
-	def editLoggerConfig(self):
+	def editLoggerConfig(self) -> None:
 		logEditor = LoggerWindow(self.logger)
 		logEditor.exec()

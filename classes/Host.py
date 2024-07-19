@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-@dataclass
+@dataclass(slots=True)
 class Host:
     name : str = None
     ip_address : str = None
@@ -9,7 +9,7 @@ class Host:
     ports_out : list = field(default_factory=list)
     
     @property
-    def hostConfiguration(self):
+    def hostConfiguration(self) -> dict:
         return {
             "name": self.name,
             "ip_address": self.ip_address,
@@ -17,7 +17,7 @@ class Host:
             "ports_in": self.ports_in,
             "ports_out": self.ports_out
         }
-    def createHost(self, parameters): 
+    def createHost(self, parameters) -> 'Host' : 
         host = Host()
         host.name = parameters['name']
         host.ip_address = parameters['ip_address']
