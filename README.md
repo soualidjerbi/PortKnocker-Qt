@@ -92,10 +92,11 @@ This project is also intended to be educational. So far, this project helped me 
 - [x] the use of [pyinstaller](https://pyinstaller.org/en/stable/) to distribute packaged apps, simple and ready-to-use on Mac OS (family requirement...) or Windows (not tried yet...)
 - [x] the use of virtual envirements as described above
 - [x] the use of [visual studio code](https://code.visualstudio.com/) to do the job
-- [x] how useful AI can be to develop faster
+- [x] how useful AI can be to develop faster. [Codeium](https://codeium.com/) has my preference so far but I also use [ChatGPT](https://chatgpt.com) from time to time, mainly to get a better grasp of Python coding concepts, tools, design patterns and so on. Youtube is also a good friend and I deeply extend all my thanks to [Mariya](https://www.youtube.com/@PythonSimplified), [Arjan](https://www.youtube.com/@ArjanCodes), [James Murphy](https://www.youtube.com/@mCoding) and whoever [Indently](https://www.youtube.com/@Indently) is 😅. Check their channels out, they all are awesome.
 - [x] the use of git tools and github.com to share what I learn and get some feedback to improve. Maybe try something bigger later
 - [x] the kind of licence which fits better to my personal ideas
 - [x] how to write this README.md and use the Markdown language
-- [ ] how to **Test code** with Python
+- [x] how to **Test code** with Python
+- [ ] why and how to use @staticmethod (for utility Classes in my context)
 - [ ] many other things I didn't think about yet :smile:
 
