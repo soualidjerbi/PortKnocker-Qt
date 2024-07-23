@@ -97,6 +97,6 @@ This project is also intended to be educational. So far, this project helped me 
 - [x] the kind of licence which fits better to my personal ideas
 - [x] how to write this README.md and use the Markdown language
 - [x] how to **Test code** with Python
-- [ ] why and how to use @staticmethod (for utility Classes in my context)
+- [x] why and how to use @staticmethod (for utility Classes in my context)
 - [ ] many other things I didn't think about yet :smile:
 
